@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0
  pragma solidity >=0.5.0 <0.9.0;
 
- contract Tether{
-   string public  name = "Tether";
-   string public   symbol = "USDT";
-    uint256  public  totalSupply = 1000000000000000000000000;
-    uint8  public decimals = 18;
+ contract RWD {
+   string public   name = "Reward Token";
+   string  public   symbol = "RWD";
+    uint256 public  totalSupply = 1000000000000000000000000;
+    uint8 public decimals = 18;
 
     event Transfer(
       address indexed  _from,
@@ -23,7 +23,7 @@
     mapping(address => mapping (address => uint256)) public  allowance;
 
 
-    constructor() public {
+    constructor() public{
       balanceOf[msg.sender] = totalSupply;
     }
 
