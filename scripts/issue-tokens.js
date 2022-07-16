@@ -1,0 +1,10 @@
+/* eslint-disable no-undef */
+const DecentralBank = artifacts.require("DecentralBank");
+
+module.exports = async function issueRewards(callback) {
+   let decentralBank = await DecentralBank.deployed();
+   await decentralBank.issueRewardToken();
+   console.log('Issued tokens');
+    callback();
+
+}
