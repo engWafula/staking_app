@@ -15,12 +15,15 @@ contract DecentralBank {
         mapping(address => bool) public isStaking;
 
         
+        
 
        constructor(RWD _rwd, Tether _tether ) public {
             rwd = _rwd;
             tether = _tether;
             owner = msg.sender;
        }
+
+
 
        function depositFunds(uint _amount) public{
           // require amount is greater than 0
